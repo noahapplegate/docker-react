@@ -1,6 +1,6 @@
 # Build react app
 #-----------------------------
-FROM node:alpine AS builder
+FROM node:16-alpine AS builder
 
 WORKDIR '/app'
 
@@ -9,7 +9,7 @@ RUN npm install
 
 COPY . .
 
-CMD npm run build
+RUN npm run build
 
 # Run the build on nginx
 #------------------------------
