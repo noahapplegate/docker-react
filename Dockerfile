@@ -14,7 +14,7 @@ RUN npm run build
 # Run the build on nginx
 #------------------------------
 FROM nginx
-
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
 # Note: nginx image will automatically run nginx by default
